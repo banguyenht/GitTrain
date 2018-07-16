@@ -1,0 +1,3 @@
+thiết lập git:
+$ git config --global user.name "<Tên người dùng>"
+$ git config --global user.email "<Địa chỉ mail>"
