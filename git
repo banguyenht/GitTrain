@@ -1,3 +1,359 @@
 thiết lập git:
 $ git config --global user.name "<Tên người dùng>"
 $ git config --global user.email "<Địa chỉ mail>"
+
+ba@ba:~/Desktop/Untitled Folder$ git config --global user.name "banguyenht"
+ba@ba:~/Desktop/Untitled Folder$ git config --global user.email "nguyenhuuba0797@gmail.com"
+ba@ba:~/Desktop/Untitled Folder$ git config --global color.ui auto
+ba@ba:~/Desktop/Untitled Folder$ git init
+Initialized empty Git repository in /home/ba/Desktop/Untitled Folder/.git/
+ba@ba:~/Desktop/Untitled Folder$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Untitled Document
+	git
+
+nothing added to commit but untracked files present (use "git add" to track)
+ba@ba:~/Desktop/Untitled Folder$ git add git
+ba@ba:~/Desktop/Untitled Folder$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   git
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Untitled Document
+
+ba@ba:~/Desktop/Untitled Folder$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+ba@ba:~/Desktop/Untitled Folder$ git all .
+git: 'all' is not a git command. See 'git --help'.
+
+Did you mean this?
+	pull
+ba@ba:~/Desktop/Untitled Folder$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   git
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Untitled Document
+
+ba@ba:~/Desktop/Untitled Folder$ git add *
+ba@ba:~/Desktop/Untitled Folder$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   Untitled Document
+	new file:   git
+
+ba@ba:~/Desktop/Untitled Folder$ git commit -m "first commit"
+[master (root-commit) e98ac78] first commit
+ 2 files changed, 3 insertions(+)
+ create mode 100644 Untitled Document
+ create mode 100644 git
+ba@ba:~/Desktop/Untitled Folder$ git status
+On branch master
+nothing to commit, working directory clean
+ba@ba:~/Desktop/Untitled Folder$ git log
+commit e98ac78cb23b93d618c8224ccac753b48620fc44
+Author: banguyenht <nguyenhuuba0797@gmail.com>
+Date:   Mon Jul 16 13:52:16 2018 +0700
+
+    first commit
+ba@ba:~/Desktop/Untitled Folder$ git remote add origin https://github.com/banguyenht/GitTrain.git
+ba@ba:~/Desktop/Untitled Folder$ git push -u origin master
+Username for 'https://github.com': banguyenht
+Password for 'https://banguyenht@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/banguyenht/GitTrain.git/'
+ba@ba:~/Desktop/Untitled Folder$ git status
+On branch master
+nothing to commit, working directory clean
+ba@ba:~/Desktop/Untitled Folder$ git push -u origin master
+Username for 'https://github.com': banguyenht
+Password for 'https://banguyenht@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/banguyenht/GitTrain.git/'
+tba@ba:~/Desktop/Untitled Folder$ git push -u origin master
+Username for 'https://github.com': banguyenht
+Password for 'https://banguyenht@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/banguyenht/GitTrain.git/'
+ba@ba:~/Desktop/Untitled Folder$ git push -u origin master
+Username for 'https://github.com': banguyenht
+Password for 'https://banguyenht@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 359 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/banguyenht/GitTrain.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+ba@ba:~/Desktop/Untitled Folder$ git add newexp.txp
+fatal: pathspec 'newexp.txp' did not match any files
+ba@ba:~/Desktop/Untitled Folder$ git add newexp.txt
+ba@ba:~/Desktop/Untitled Folder$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   newexp.txt
+
+ba@ba:~/Desktop/Untitled Folder$ git commit -m "update second"
+[master 56233cf] update second
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 newexp.txt
+ba@ba:~/Desktop/Untitled Folder$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': banguyenht
+Password for 'https://banguyenht@github.com': 
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 287 bytes | 0 bytes/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/banguyenht/GitTrain.git
+   e98ac78..56233cf  master -> master
+ba@ba:~/Desktop/Untitled Folder$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+ba@ba:~/Desktop/Untitled Folder$ git log
+commit 56233cf275fd891f985c435f1793af9c09a77f57
+Author: banguyenht <nguyenhuuba0797@gmail.com>
+Date:   Mon Jul 16 14:07:05 2018 +0700
+
+    update second
+
+commit e98ac78cb23b93d618c8224ccac753b48620fc44
+Author: banguyenht <nguyenhuuba0797@gmail.com>
+Date:   Mon Jul 16 13:52:16 2018 +0700
+
+    first commit
+ba@ba:~/Desktop/Untitled Folder$ git commit -m "edit git"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+	modified:   newexp.txt
+
+no changes added to commit
+ba@ba:~/Desktop/Untitled Folder$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   newexp.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ba@ba:~/Desktop/Untitled Folder$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   newexp.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ba@ba:~/Desktop/Untitled Folder$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': banguyenht
+Password for 'https://banguyenht@github.com': 
+Everything up-to-date
+ba@ba:~/Desktop/Untitled Folder$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   newexp.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ba@ba:~/Desktop/Untitled Folder$ git add newexp.txt
+ba@ba:~/Desktop/Untitled Folder$ git comit -m "edit newexp"
+git: 'comit' is not a git command. See 'git --help'.
+
+Did you mean this?
+	commit
+ba@ba:~/Desktop/Untitled Folder$ git commit -m "edit newexp"
+[master 8dcc36f] edit newexp
+ 1 file changed, 3 insertions(+)
+ba@ba:~/Desktop/Untitled Folder$ git log
+commit 8dcc36f8c8bf40b4c57d9fda62681fd6abdb62fb
+Author: banguyenht <nguyenhuuba0797@gmail.com>
+Date:   Mon Jul 16 14:19:21 2018 +0700
+
+    edit newexp
+
+commit 56233cf275fd891f985c435f1793af9c09a77f57
+Author: banguyenht <nguyenhuuba0797@gmail.com>
+Date:   Mon Jul 16 14:07:05 2018 +0700
+
+    update second
+
+commit e98ac78cb23b93d618c8224ccac753b48620fc44
+Author: banguyenht <nguyenhuuba0797@gmail.com>
+Date:   Mon Jul 16 13:52:16 2018 +0700
+
+    first commit
+ba@ba:~/Desktop/Untitled Folder$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': banguyenht
+Password for 'https://banguyenht@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 384 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/banguyenht/GitTrain.git
+   56233cf..8dcc36f  master -> master
+ba@ba:~/Desktop/Untitled Folder$ git pull origin
+Already up-to-date.
+ba@ba:~/Desktop/Untitled Folder$ git pull origin master
+From https://github.com/banguyenht/GitTrain
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+ba@ba:~/Desktop/Untitled Folder$ git checkout
+Your branch is up-to-date with 'origin/master'.
+ba@ba:~/Desktop/Untitled Folder$ git log -p -2
+commit 8dcc36f8c8bf40b4c57d9fda62681fd6abdb62fb
+commit 8dcc36f8c8bf40b4c57d9fda62681fd6abdb62fb
+commit 8dcc36f8c8bf40b4c57d9fda62681fd6abdb62fb
+Author: banguyenht <nguyenhuuba0797@gmail.com>
+Date:   Mon Jul 16 14:19:21 2018 +0700
+
+    edit newexp
+
+diff --git a/newexp.txt b/newexp.txt
+index e69de29..3c32686 100644
+--- a/newexp.txt
++++ b/newexp.txt
+@@ -0,0 +1,3 @@
++Đến cả con khỉ cũng hiểu được lệnh Git
++add: Đăng ký thay đổi trong index
++commit: Lưu lại trạng thái của index
+
+commit 56233cf275fd891f985c435f1793af9c09a77f57
+Author: banguyenht <nguyenhuuba0797@gmail.com>
+Date:   Mon Jul 16 14:07:05 2018 +0700
+
+    update second
+
+diff --git a/newexp.txt b/newexp.txt
+new file mode 100644
+index 0000000..e69de29
+...skipping...
+Author: banguyenht <nguyenhuuba0797@gmail.com>
+Date:   Mon Jul 16 14:19:21 2018 +0700
+
+    edit newexp
+
+diff --git a/newexp.txt b/newexp.txt
+index e69de29..3c32686 100644
+--- a/newexp.txt
++++ b/newexp.txt
+@@ -0,0 +1,3 @@
++Đến cả con khỉ cũng hiểu được lệnh Git
++add: Đăng ký thay đổi trong index
++commit: Lưu lại trạng thái của index
+
+commit 56233cf275fd891f985c435f1793af9c09a77f57
+Author: banguyenht <nguyenhuuba0797@gmail.com>
+Date:   Mon Jul 16 14:07:05 2018 +0700
+
+    update second
+
+diff --git a/newexp.txt b/newexp.txt
+new file mode 100644
+index 0000000..e69de29
+(END)
